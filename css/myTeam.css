@@ -1,0 +1,18 @@
+body {
+    background-image: url(/img/background-myTeam.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    color:white;
+}
+table{
+    margin-left: 50%;
+    margin-top: 5%;
+    text-align: center;
+}
+h1,h2{
+    font-size: 55px;
+    margin-left: 42%;
+}

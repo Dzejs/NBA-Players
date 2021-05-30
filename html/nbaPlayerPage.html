@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/nbaPlayerPage.css">
+    <title>NBA Players Page</title>
+</head>
+
+<body>
+    <!-- This is the navBar it contains the logo image the myTeamButton that redirects tha user to the last html and the userSpan which contains the userName that the user entered -->
+
+    <nav id="navBar">
+        <div>
+            <img src="/img/nba-Logo.png" alt="nba logo" id="imgLogo">
+        </div>
+        <div id="myTeamWrapper">
+            <button id="myTeamButton"> My team</button>
+        </div>
+        <span id="userNameSpan"></span>
+    </nav>
+
+    <!-- This is a quick discription of what this page is all about -->
+    
+    <div id="description">
+        <h1>Wellcome</h1>
+        <p>On this page you can filter through all the playes by typing there name, by picking what position they play, and filter them alphabetically <br>You can also make your own dream team by choosing the players!<br> Have fun!</p>
+    </div>
+    
+    <!-- This is the tableWrapperDiv that contains the filterMenu which has the input for the user to enter and filter the name he wants to be printed
+        The filterButton which is used to get the input value, the resetButton which resets the table to its normal state, the dropDownFilter which 
+        the user can filter the players by the position they play and the Ascending and Descending buttons which filter the players alphabetically
+
+        After that we have the table that is used to print all the users from the APi in the tbody and the loader at the end
+    -->
+    <div id="tableWrapper">
+
+        <div id="filterMenu">
+
+            <input type="text" id="filterInput" placeholder="Search by name...">
+            <button id="filterButton">Filter</button>
+            <button id="resetButton">Reset</button>
+            <select id="dropDownFilter">
+                <option>DropDown</option>
+                <option id="optionC">C</option>
+                <option id="optionF">F</option>
+                <option id="optionG">G</option>
+            </select>
+            <button id="ascendingButton">
+                <img src="/img/sort-ascending.png" id="ascendingImg">
+            </button>
+            
+            <button id="descendingButton">
+                <img src="/img/sort-descending.png" id="descendingImg">
+            </button>
+        </div>
+        <table id="table">
+            <thead>
+                <th>ID</th>
+                <th>Full name</th>
+                <th>Position</th>
+                <th>Team</th>
+                <th>City</th>
+            </thead>
+            <tbody id="playerTableBody"></tbody>
+        </table>
+        <div id="loader" style="display: none;">
+            <img src="/img/loader.jpg" alt="loader" id="loaderImg">
+        </div>
+    </div>
+
+<script src="/scripts/myTeamPrintService.js"></script>
+<script src="/scripts/nbaPlayerPage.js"></script>
+<script src="/scripts/nbaPlayerPagePrintService.js"></script>
+<script src="/scripts/nbaPlayerFilterService.js"></script>
+</body>
+
+</html>
