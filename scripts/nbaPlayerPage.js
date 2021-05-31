@@ -1,9 +1,12 @@
 const ApiService = {
     cachedData : null,
     loader : document.getElementById("loader"),
-    // This is the function that is used to call the balldontlie API and the loader accordingly 
+    errorImg : document.getElementById("errorImg"),
+    table : document.getElementById("table"),
+
+    // This is the function that is used to call the balldontlie API and the loader accordingly
     // It uses a setTimeout to wait 1 second before calling all the functios from the other scripts so that we can see the loader since the time to get the data is short
-    // And here we also cache the data 
+    // And here we also cache the data and catch an error if something goes wrong with the API call
 
     callNbaApi : function () {
         ApiService.loaderHelper(true);
@@ -20,6 +23,11 @@ const ApiService = {
                 nbaFilterService.resetButtonRegisterListener(this.cachedData);
                 ApiService.loaderHelper(false);
             }, 1000);     
+        })
+        .catch(() => {
+            ApiService.table.innerHTML = ``;
+            ApiService.errorImg.style.display ="block";
+            ApiService.loaderHelper(false);
         });
         
     },

@@ -6,7 +6,7 @@ const nbaFilterService = {
     descendingButton: document.getElementById("descendingButton"),
     playerTableBody : document.getElementById("playerTableBody"),
     resetButton : document.getElementById("resetButton"),
-    // This function is a helper function that prints out the filtered data in almoust all the functions below
+    // This function is a helper function that prints out the filtered data in almost all the functions below
     // It is connected with the printFilteredDataHelper so it can iterate trough the data
 
     printPlayers : function (player) {
@@ -88,7 +88,7 @@ const nbaFilterService = {
             }
         }
     },
-    // This is the event that checks what position in the dropDown has been clicked and then calls the functions above accordingly
+    // This is the event that checks which position in the dropDown has been clicked and then calls the functions above accordingly
 
     registerEventDropDown: function (players) {
         this.dropDownFilter.addEventListener("change", function (e) {

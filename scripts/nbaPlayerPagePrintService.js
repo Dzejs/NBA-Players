@@ -29,8 +29,8 @@ const nbaPlayerTableService = {
     },
 
     // This function adds all the players the user wants to be in his dream team 
-    // It parses the data from the localStorage to an JavaScrpt object then checks if the uses has added more than 12 players 
-    // It also checks if the user has already added that player if he has he cant add the same player to the team
+    // It parses the data from the localStorage to a JavaScrpt object then checks if the user has added more than 12 players 
+    // It also checks if the user has already added that player. If he has he can't add the same player to the team
 
     addPlayerToMyTeam : function(id) {
         let myTeamPlayers = [];

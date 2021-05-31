@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <!-- This is the navBar it contains the logo image the myTeamButton that redirects tha user to the last html and the userSpan which contains the userName that the user entered -->
+    <!-- This is the navBar. It contains the logo image for the myTeamButton that redirects the user to the last html and the userSpan which contains the userName that the user entered -->
 
     <nav id="navBar">
         <div>
@@ -22,18 +22,18 @@
         <span id="userNameSpan"></span>
     </nav>
 
-    <!-- This is a quick discription of what this page is all about -->
+    <!-- This is a quick description of what this page is all about -->
     
     <div id="description">
-        <h1>Wellcome</h1>
-        <p>On this page you can filter through all the playes by typing there name, by picking what position they play, and filter them alphabetically <br>You can also make your own dream team by choosing the players!<br> Have fun!</p>
+        <h1>Welcome</h1>
+        <p>On this page you can filter through all the players by typing their name, by picking the position they play and filtering them alphabetically <br>You can also make your own dream team by choosing the players!<br> Have fun!</p>
     </div>
     
     <!-- This is the tableWrapperDiv that contains the filterMenu which has the input for the user to enter and filter the name he wants to be printed
         The filterButton which is used to get the input value, the resetButton which resets the table to its normal state, the dropDownFilter which 
         the user can filter the players by the position they play and the Ascending and Descending buttons which filter the players alphabetically
 
-        After that we have the table that is used to print all the users from the APi in the tbody and the loader at the end
+        After that we have the table that is used to print all the users from the API in the tbody and the loader and the error image at the end
     -->
     <div id="tableWrapper">
 
@@ -49,11 +49,11 @@
                 <option id="optionG">G</option>
             </select>
             <button id="ascendingButton">
-                <img src="../img/sort-ascending.png" id="ascendingImg">
+                <img src="../img/sort-ascending.png" id="ascendingImg"  alt="ascengind image">
             </button>
             
             <button id="descendingButton">
-                <img src="../img/sort-descending.png" id="descendingImg">
+                <img src="../img/sort-descending.png" id="descendingImg"  alt="descending image">
             </button>
         </div>
         <table id="table">
@@ -65,7 +65,10 @@
                 <th>City</th>
             </thead>
             <tbody id="playerTableBody"></tbody>
-        </table>
+        </table>    
+
+        <img src="../img/error.png" alt="error image" style="display: none;" id="errorImg">
+
         <div id="loader" style="display: none;">
             <img src="../img/loader.jpg" alt="loader" id="loaderImg">
         </div>
