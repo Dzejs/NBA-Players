@@ -47,6 +47,7 @@ const nbaPlayerTableService = {
                 if (player.id == id) {
                     myTeamPlayers.push(player);
                     localStorage.setItem("players", JSON.stringify(myTeamPlayers));
+                    alert("You added this player to your team!");
                 }
             }
         }

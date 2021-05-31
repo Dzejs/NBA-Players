@@ -50,7 +50,7 @@ const nbaFilterService = {
                 break;
             }
             else{
-                this.playerTableBody.innerHTML = `There is no player with that name please try again!`;
+                this.playerTableBody.innerHTML = `<div style ="color: red"> <br/ >There is no player with that name please try again!</div>`;
             }
         }
     },
