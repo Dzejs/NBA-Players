@@ -56,7 +56,7 @@ const nbaPlayerTableService = {
 
     myTeamRedirect: function() {
         this.myTeamButton.addEventListener("click", function () {
-            document.location = `/html/myTeam.html`;
+            document.location = `../html/myTeam.html`;
         });
     }
 }

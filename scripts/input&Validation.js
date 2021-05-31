@@ -13,7 +13,7 @@ const homePageService = {
             this.errorMessage.innerHTML = `<span> *Minimum 3 characters for the user name </span>`;
         }
         else {
-            document.location = "/html/nbaPlayerPage.html";
+            document.location = "../html/nbaPlayerPage.html";
             localStorage.setItem("userName", this.userName.value);
         }
     }

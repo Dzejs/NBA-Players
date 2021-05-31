@@ -128,7 +128,7 @@ const nbaFilterService = {
             if (player1.first_name < player2.first_name) return 1;
             else return 0;
         });
-        nbaFilterService. printFilteredDataHelper(sortedDescending);
+        nbaFilterService.printFilteredDataHelper(sortedDescending);
     }, 
 
     // This is the function that has the events for the filterByNameAscending and filterByNameDescending functions
